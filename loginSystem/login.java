@@ -153,6 +153,7 @@ public class login extends javax.swing.JFrame {
                    String line = sc.nextLine();
                    if (userInput.equals(line)){
                        this.dispose();
+                       JOptionPane.showMessageDialog(null, "You are entered!");
                    }
                }
                outputLabel.setText("Invalid input! Account DNE.");
