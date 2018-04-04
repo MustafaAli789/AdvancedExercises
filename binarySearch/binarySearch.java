@@ -18,11 +18,11 @@ public class binarySearch {
             else if(number < numList.get(middle)){
                 high = middle -1;
             }
-            else{
+            else{ //equal numbers have been found
                 return true;
             }
         }
-        return false;
+        return false; //no matching numbers found
         
     }
     
