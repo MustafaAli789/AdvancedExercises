@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class recursiveAddition {
     
-    public static int recursiveSum(int increment, int endValue, int sum){
+    public static int recursiveSum(int increment, int endValue){
+        int sum = 0;
         if (endValue <= 0){
             return sum;
         }
         else{
-            sum += endValue + recursiveSum(increment, endValue-increment, sum);
+            sum += endValue + recursiveSum(increment, endValue-increment);
         }
         return sum;
     }
@@ -26,10 +27,10 @@ public class recursiveAddition {
             System.out.println("Enter the end number (greater than 0):");
             int endValue = sc.nextInt();
             if(endValue % increment != 0){
-                System.out.println("The end value and increment must both be odd or both be even.");
+                System.out.println("The end value and increment must be evenly divisible by one another.");
             }
             else{
-                System.out.println("The sum is: " + recursiveSum(increment, endValue, sum));
+                System.out.println("The sum is: " + recursiveSum(increment, endValue));
             }
         }
     }
