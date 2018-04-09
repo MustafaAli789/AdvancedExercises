@@ -23,11 +23,15 @@ public class towerOfHanoi {
         int diskNum;
         
         while (true){
-            System.out.println("Enter the number of dissk in the tower of Hanoi game.");
+            System.out.println("Enter the number of disks in the tower of Hanoi game. Enter -1 to quit!");
             diskNum = sc.nextInt();
             
             if(diskNum > 0){
                 System.out.println("The number of moves needed to win the game is: " + moveSolver(diskNum));
+            }
+            else if (diskNum == -1){
+                System.out.println("Thank you for using this applciation!");
+                break;
             }
             else{
                 System.out.println("Enter a number greater than 0!");
