@@ -8,16 +8,16 @@ public class Question_1 {
         Scanner sc = new Scanner (System.in);
         
         System.out.println("Enter a dividend.");
-        int inputDividend  = sc.nextInt();
+        double inputDividend  = sc.nextInt();
         System.out.println("Enter a divisor.");
-        int inputDivisor  = sc.nextInt();
+        double inputDivisor  = sc.nextInt();
         if (inputDivisor == 0){
             throw new ArithmeticException ("Divided by zero");      
         }
         else {
-            System.out.println(inputDividend + "/" + inputDivisor + "=" + inputDividend/inputDivisor);
+            double quotient = inputDividend/inputDivisor;
+            System.out.printf(inputDividend + "/" + inputDivisor + "=" + "%.2f", quotient);
         }
 
     }
-    
 }
